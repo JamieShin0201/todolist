@@ -43,7 +43,7 @@ class TodoServiceTest {
     @DisplayName("할일 상태 변경")
     @ParameterizedTest
     @EnumSource(value = TodoStatus.class, names = {"COMPLETED", "DELETED"})
-    void completeTodo(TodoStatus todoStatus) {
+    void changeTodoStatus(TodoStatus todoStatus) {
         Long todoId = todoService.saveTodo(todo);
 
         todoService.changeTodoStatus(todoId, todoStatus);

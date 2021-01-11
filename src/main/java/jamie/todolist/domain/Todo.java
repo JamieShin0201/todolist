@@ -17,7 +17,7 @@ public class Todo {
     @Enumerated(EnumType.STRING)
     private TodoStatus status;
 
-    public Todo createTodo(String content) {
+    public static Todo createTodo(String content) {
         Todo todo = new Todo();
         todo.content = content;
         todo.status = TodoStatus.NEW;
